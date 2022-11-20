@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="state1"> 
+            <h1> How well do you know the Game of Thrones characters?</h1>
+            <h2> Type the first name of the character shown in the image  </br>
+            Guess as many characters possible within a minuit
+            </h2>
+             <form id="gamerName">
+                <input class="buttonStyles" type="text" name="name" />
+                <button class="buttonStyles" type="submit">Submit</button>
+              </form> 
+              <div id="welcomeMsg"> </div>
+            <button class="startButton" id="startButton" > Start</button>
+        </div>
+   
+  <div id="state2"> 
+    <p id="timer"> Timer</p>
+    <p id="clock"> </p>
+    <div id="Game"> 
+        <img src="" class="randomPicture" id="RandomPicture"/> 
+        <h2> Type the first name of the character</h2>
+        <form id="respond">
+            <input class="buttonStyles" type="text" name="response" />
+            <button class="buttonStyles" type="submit">Submit</button>
+          </form>
+    </div>
+  </div>
+   
+<div id="state3">
+    <h1 id="gameOver">
+      Game over   
+    </h1>
+    <h1 id="finalScore"> Final score</h1>
+    
+    <button id="replay" class="buttonStyles"> 
+        Replay
+    </button>
+    
+</div>
+    
+</div>
+    <script src="script.js" type="module"></script>   
+    <script src="timer.js" type="module"></script> 
+    <script src="localStorage.js" type="module"></script> 
+</body>
+</html>
