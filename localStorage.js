@@ -27,9 +27,4 @@ let name = form.elements.name.value;
   document.getElementById("startButton").style.display = "flex";
  }
 };
- /*
-export function storeScores(){
-    let form = document.getElementById("gamerName");
-    let name = form.elements.name.value;
-     
-} */
+ 

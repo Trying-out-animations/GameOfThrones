@@ -10,7 +10,7 @@ export function countDown(){
     function getFutureTime(date, minutes) {
       return new Date(date.getTime() + minutes*60000);
     }
-    let futureTime=getFutureTime(currentTime, 1);
+    let futureTime=getFutureTime(currentTime, 0.5);
     
     // Set the date we're counting down to
     let countDownDate = futureTime.getTime();
