@@ -4,8 +4,6 @@
 let points = 0;
 
 import { countDown } from "./timer.js";
-//import {StoreFinalScore} from "./localStorage.js";
-import { printWelcomeMessage } from "./localStorage.js";
 
 printWelcomeMessage();
 //Function gets data from the API
@@ -102,3 +100,18 @@ document.getElementById("timer").style.display = "none";
 let date = new Date();
 let year = date.getFullYear();
 currentYear.innerHTML = year;
+
+export function printWelcomeMessage() {
+  //gamer name submit form
+  let form = document.getElementById("gamerName");
+  form.onsubmit = function (event) {
+    event.preventDefault();
+    let name = form.elements.name.value;
+
+    // welcome message to the player
+    document.getElementById("welcomeMsg").innerHTML =
+      "Hello " + name + ", Good luck!";
+    document.getElementById("gamerName").style.display = "none";
+    document.getElementById("startButton").style.display = "flex";
+  };
+}
