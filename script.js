@@ -6,7 +6,6 @@ let points = 0;
 import { countDown } from "./timer.js";
 //import {StoreFinalScore} from "./localStorage.js";
 import { printWelcomeMessage } from "./localStorage.js";
-import { StoreFinalScore } from "./fireBase.js";
 
 printWelcomeMessage();
 //Function gets data from the API
@@ -48,15 +47,15 @@ async function getData(character) {
       firstName = data[randomNumber2].firstName;
       points += 1;
       console.log(points);
+
+      //allow access to points from
+      let accessFinalScore = document.getElementById("accessFinalScore");
+      accessFinalScore.value = points;
+
       //storing the final score in the localStorage.js
 
       let finalScoreMessage = document.getElementById("finalScore");
       finalScoreMessage.innerHTML = "Final Score : " + points;
-
-      //access the the user name
-      let form1 = document.getElementById("gamerName");
-      let userName = form1.elements.name.value;
-      StoreFinalScore(userName, points);
     } else form2.elements.response.value = "";
     let randomNumber3 = Math.floor(Math.random() * 52);
     console.log(randomNumber3);

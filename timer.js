@@ -1,6 +1,7 @@
 /** @format */
 
 // Creating and exporting the Timer here!
+import { StoreFinalScore } from "./fireBase.js";
 
 export function countDown() {
   let Timer = document.getElementById("timer");
@@ -34,6 +35,13 @@ export function countDown() {
       clearInterval(x);
       document.getElementById("state2").style.display = "none";
       document.getElementById("state3").style.display = "flex";
+      //access the user name
+      let form1 = document.getElementById("gamerName");
+      let userName = form1.elements.name.value;
+
+      //access points from script.js
+      let accessFinalScore = document.getElementById("accessFinalScore");
+      StoreFinalScore(userName, accessFinalScore.value);
     }
   }, 1000);
 }
