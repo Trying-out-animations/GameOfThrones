@@ -10,29 +10,42 @@
 <body>
     <div class="container">
         <div id="state1"> 
-            <h1> How well do you know the Game of Thrones characters?</h1>
-            <h2> Type the first name of the character shown in the image  </br>
-            Guess as many characters possible within a minuit
-            </h2>
-             <form id="gamerName">
-                <input class="buttonStyles" type="text" name="name" />
+          <div class="instructions1"> 
+            <h1> How well do you know the Game of Thrones characters?</h1>  
+          </div>
+            <div class="instructions1">
+              <h2>Instructions: <br>
+                 Type the first name of the character shown in the image.  </br>
+                Guess as many characters as possible within a minuit.
+                </h2>
+            </div>
+           
+             <form class="gamerName" id="gamerName">
+                <input class=" answerButton" type="text" name="name" placeholder="Your Name:" />
                 <button class="buttonStyles" type="submit">Submit</button>
               </form> 
-              <div id="welcomeMsg"> </div>
+              <div class="gamerName" id="welcomeMsg"> </div>
             <button class="startButton" id="startButton" > Start</button>
         </div>
    
   <div id="state2"> 
     <p id="timer"> Timer</p>
-    <p id="clock"> </p>
-    <div id="Game"> 
+    <!--<h2> Type the first name of the character</h2> -->
+      <div id="imageDiv">
         <img src="" class="randomPicture" id="RandomPicture"/> 
-        <h2> Type the first name of the character</h2>
-        <form id="respond">
-            <input class="buttonStyles" type="text" name="response" />
-            <button class="buttonStyles" type="submit">Submit</button>
-          </form>
-    </div>
+      </div>              
+          <div class="typeAnswer"> 
+            <div class="clock" id="clock"> </div>
+            <form class="respond" id="respond">
+              <label for="First Name">Type the first name of the character</label>
+                <input class="answerButton" type="text" name="response" placeholder="First Name:"/>
+                <button class="buttonStyles" type="submit">Submit</button>
+              </form>
+          </div>
+         
+          
+        
+     
   </div>
    
 <div id="state3">
@@ -48,8 +61,20 @@
 </div>
     
 </div>
+<footer> 
+  <p>
+    Done by: Sammani Ariyarathne
+     &copy;copyright 2022&mdash;<span
+      id="currentYear"
+    ></span>
+  </p>  
+</footer>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
     <script src="script.js" type="module"></script>   
     <script src="timer.js" type="module"></script> 
     <script src="localStorage.js" type="module"></script> 
+    <script src="fireBase.js" type="module"></script> 
+    
 </body>
 </html>
