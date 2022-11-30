@@ -37,3 +37,6 @@ export async function StoreFinalScore(userName, points) {
 }
 
 arrangeScores();
+
+//instead of the normal score message, this types a special highest score message
+//finalScoreEl.innerHTML = userName + ", Your score is : " + points;
