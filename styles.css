@@ -120,3 +120,21 @@ body {
     width: 100%;
     text-align: center;
   }
+  table{
+    border-collapse: collapse;
+    width: 100%;
+  }
+   tr{
+  text-align: left;
+  padding: 8px;
+  border: 1px solid  #73AD21;
+  }
+  th{
+    padding:8px;
+    border: 1px solid  #73AD21;
+    color: #73AD21;
+  }
+  td{
+    padding:8px;
+    border: 1px solid  #73AD21;
+  }
