@@ -1,6 +1,5 @@
 /** @format */
 "use strict";
-import { RetrieveFinalScore } from "./fireBase.js";
 
 export function CodedLeaderBoard(
 	oldScoreDataFromFirebase
@@ -10,7 +9,7 @@ export function CodedLeaderBoard(
 			"scoreTable"
 		);
 
-	// Loop through the data from the firebase and create a new row for each item
+	// Loop through the data from the firebase.
 	oldScoreDataFromFirebase.forEach(
 		(doc) => {
 			console.log(doc.data());
@@ -27,26 +26,6 @@ export function CodedLeaderBoard(
 			cellOne.innerHTML = newRow.name;
 			cellTwo.innerHTML =
 				newRow.finalScore;
-
-			/*
-			//Create a row with two columns
-			const row =
-				document.createElement("tr");
-			tableBody.appendChild(row);
-			const cell1 =
-				document.createElement("td");
-			const cell2 =
-				document.createElement("td");
-			tableBody.row.appendChild(cell1);
-			tableBody.row.appendChild(cell2);
-
-			//Access data from the firebase
-			let newRow = doc.data();
-
-			//  Insert the data from the firebase into the table
-			cell1.innerHTML = newRow.name;
-			cell2.innerHTML =
-				newRow.finalScore; */
 		}
 	);
 }

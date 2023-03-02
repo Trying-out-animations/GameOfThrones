@@ -1,11 +1,8 @@
 /** @format */
-
 "use strict";
-let points = 0;
-
 import { countDown } from "./timer.js";
-import { CodedLeaderBoard } from "./leaderBoard.js";
 
+let points = 0;
 printWelcomeMessage();
 //Function gets data from the API
 async function getData(character) {
@@ -21,7 +18,7 @@ async function getData(character) {
 	);
 	console.log(randomNumber);
 
-	//accessing that randomly generated number(index in the array) to print a random picture
+	//accessing that randomly generated number(index in the array) to print the random picture related to the random number
 	let randomCharacter =
 		data[randomNumber].imageUrl;
 
@@ -31,7 +28,6 @@ async function getData(character) {
 	);
 	Random.src = randomCharacter;
 
-	//checking the response
 	let firstName =
 		data[randomNumber].firstName;
 	//console.log(firstName);
@@ -135,10 +131,6 @@ function Start() {
 	).style.display = "flex";
 	//calling the function to start counting down
 	countDown();
-
-	/*store points in local storage
-localStorage.setItem("finalScore", points);
-let pointsArray= localStorage.getItem("finalScore");  */
 }
 
 //state1

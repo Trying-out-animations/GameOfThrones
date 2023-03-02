@@ -1,5 +1,4 @@
 /** @format */
-
 "use strict";
 import { CodedLeaderBoard } from "./leaderBoard.js";
 
@@ -46,11 +45,6 @@ export async function StoreFinalScore(
 		created: new Date(),
 	});
 }
-
-//arrangeScores();
-
-//Create a reference to firebase/database service
-//let database = firebase.database();
 
 //Fetch data from firebase
 export async function RetrieveFinalScore() {

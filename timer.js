@@ -1,5 +1,5 @@
 /** @format */
-
+"use strict";
 // Creating and exporting the Timer here!
 import { StoreFinalScore } from "./fireBase.js";
 import { RetrieveFinalScore } from "./fireBase.js";
