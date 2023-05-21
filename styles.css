@@ -22,7 +22,7 @@ body {
 	flex-wrap: wrap;
 	flex-direction: column;
 	justify-content: center;
-	margin-top: 3rem;
+	margin-top: 0.5rem;
 	align-items: center;
 	text-align: center;
 }
@@ -37,7 +37,7 @@ body {
 	flex-direction: column;
 	justify-content: space-between;
 	max-width: 70rem;
-	margin-top: 10rem;
+	margin-top: 5rem;
 }
 .instructions1 {
 	/* border: 0.15px solid #73AD21;  */
