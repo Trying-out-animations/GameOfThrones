@@ -50,10 +50,12 @@ body {
 
 .typeAnswer {
 	position: fixed;
-	top: 0;
-	right: 0;
+	bottom: 10%;
 	width: 18.74rem;
 	border: 0.15px solid #73ad21;
+}
+#imageDiv {
+	max-width: 400px;
 }
 
 .buttonStyles {
@@ -154,7 +156,6 @@ th {
 	width: 150px;
 	height: 150px;
 	border-radius: 50%;
-
 	transform: scaleX(5);
 }
 
@@ -163,13 +164,6 @@ th {
 	height: 60px;
 	border-radius: 50%;
 	transform: scaleX(0.2);
-}
-
-#fire1 {
-	background-color: blue;
-}
-#fire2 {
-	background-color: green;
 }
 
 .route {
