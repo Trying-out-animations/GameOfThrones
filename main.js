@@ -23,4 +23,16 @@ window.onload = function () {
 		canvas.width,
 		canvas.height
 	);
+	for (let i = 0; i < 50; i += 1) {
+		context.beginPath();
+		context.moveTo(
+			Math.random() * canvas.width,
+			Math.random() * canvas.height
+		);
+		context.lineTo(
+			Math.random() * canvas.width,
+			Math.random() * canvas.height
+		);
+		context.stroke();
+	}
 };
