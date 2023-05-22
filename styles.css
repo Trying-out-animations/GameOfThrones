@@ -8,9 +8,15 @@
 body {
 	/* background-image: url("image1.webp"); */
 	background-color: black;
-	color: white;
+	color: #fac5b8;
 	font-size: 1.25rem;
+	overflow: hidden;
+	height: 100vh;
+	background-image: url("bg.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
+
 .container {
 	display: flex;
 	flex-wrap: wrap;
@@ -137,4 +143,68 @@ th {
 	padding: 15px;
 	border: 1px solid #73ad21;
 	color: #73ad21;
+}
+
+.animations {
+	/*display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between; */
+
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+
+	transform: scaleX(5);
+}
+
+.planet {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	transform: scaleX(0.2);
+}
+
+#fire1 {
+	background-color: blue;
+}
+#fire2 {
+	background-color: green;
+}
+
+.route {
+	width: 100%;
+	height: 100%;
+	animation: rotate 12s infinite linear;
+	position: absolute;
+}
+.planetContainer {
+	animation: correct 12s infinite linear;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+}
+#secondPlanetContainer {
+	left: 85px;
+}
+#thirdPlanetContainer {
+	left: 42.5px;
+}
+
+@keyframes rotate {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}
+
+@keyframes correct {
+	0% {
+		transform: rotateZ(360deg);
+	}
+	100% {
+		transform: rotateZ(0deg);
+	}
 }
