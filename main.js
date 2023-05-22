@@ -23,6 +23,7 @@ window.onload = function () {
 		canvas.width,
 		canvas.height
 	);
+	/*This  is to draw random strokes
 	for (let i = 0; i < 50; i += 1) {
 		context.beginPath();
 		context.moveTo(
@@ -33,6 +34,27 @@ window.onload = function () {
 			Math.random() * canvas.width,
 			Math.random() * canvas.height
 		);
+		context.stroke();
+	} */
+
+	//Drawing random circles
+	for (let i = 0; i < 50; i++) {
+		const centerX =
+			Math.random() * canvas.width;
+		const centerY =
+			Math.random() * canvas.height;
+		const radius = Math.random() * 50;
+
+		context.beginPath();
+		context.arc(
+			centerX,
+			centerY,
+			radius,
+			0,
+			2 * Math.PI
+		);
+		context.fillStyle = "red";
+		context.fill();
 		context.stroke();
 	}
 };
