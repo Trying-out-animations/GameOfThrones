@@ -16,7 +16,7 @@ window.onload = function () {
 		canvas.getContext("2d");
 	canvas.width = 400;
 	canvas.height = 400;
-	context.fillStyle = "#fac5b8";
+	context.fillStyle = "#000000";
 	context.fillRect(
 		0,
 		0,
@@ -53,7 +53,7 @@ window.onload = function () {
 			0,
 			2 * Math.PI
 		);
-		context.fillStyle = "red";
+		context.fillStyle = "#fac5b8";
 		context.fill();
 		context.stroke();
 	}
